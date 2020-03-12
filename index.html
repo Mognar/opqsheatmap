@@ -43,8 +43,8 @@ d3.csv("https://raw.githubusercontent.com/Mognar/opqsheatmap/master/opqs1719.csv
   svg.append("g")
     .style("font-size", 15)
     .attr("transform", "translate(0," + height + ")")
-  .attr("transform", "rotate(90)")
     .call(d3.axisBottom(x).tickSize(0))
+    .attr("transform", "rotate(90)")
     .select(".domain").remove()
 
   // Build Y scales and axis:
