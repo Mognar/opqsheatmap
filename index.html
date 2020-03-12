@@ -16,8 +16,8 @@
 
 // set the dimensions and margins of the graph
 var margin = {top: 80, right: 25, bottom: 30, left: 40},
-  width = 450 - margin.left - margin.right,
-  height = 450 - margin.top - margin.bottom;
+  width = 900 - margin.left - margin.right,
+  height = 700 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 var svg = d3.select("#my_dataviz")
@@ -59,7 +59,7 @@ d3.csv("https://raw.githubusercontent.com/Mognar/opqsheatmap/master/opqs1719.csv
   // Build color scale
   var myColor = d3.scaleSequential()
     .interpolator(d3.interpolateInferno)
-    .domain([1,100])
+    .domain([1,50])
 
   // create a tooltip
   var tooltip = d3.select("#my_dataviz")
