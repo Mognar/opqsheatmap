@@ -164,7 +164,14 @@ var axisheight = 95
     .on("mouseover", mouseover)
     .on("mousemove", mousemove)
     .on("mouseleave", mouseleave)
-})
+    .on("dblclick", function(d) {
+            console.log('open tab')
+            var url = "https://search-material.parliament.uk/search?Parameters.Fields.all=Department%3A%22" + d.group + "%22&Parameters.Fields.type=Oral+questions&Parameters.Fields.type=Oral+questions&Parameters.Fields.member=%22"+ d.variable + "%22&Parameters.Fields.session=17%2F19&Parameters.PageSize=10"
+            window.open(
+              url,
+              '_blank' // <- This is what makes it open in a new window.
+            );
+          });
 
 // Add title to graph
 /*svg.append("text")
